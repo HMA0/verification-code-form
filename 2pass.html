@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج رمز التحقق</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>أدخل رمز التحقق</h2>
+        <form action="verify.php" method="POST">
+            <label for="verification-code">رمز التحقق:</label>
+            <input type="text" id="verification-code" name="verification-code" placeholder="أدخل رمز التحقق" required>
+            <button type="submit">إرسال</button>
+        </form>
+
+        <?php
+        if (isset($_GET['message'])) {
+            echo '<div id="message">' . htmlspecialchars($_GET['message']) . '</div>';
+        }
+        ?>
+    </div>
+</body>
+</html>

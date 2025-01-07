@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدخال رمز التحقق</title>
+    <style>
+        /* تحديد الخلفية والخصائص العامة */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            direction: rtl; /* الاتجاه من اليمين لليسار للغة العربية */
+            text-align: center;
+        }
+
+        /* تنسيق العنوان الرئيسي */
+        h2 {
+            color: #333;
+            margin-top: 50px;
+        }
+
+        /* تنسيق النموذج */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+
+        /* تنسيق الحقول في النموذج */
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+            text-align: right;
+            margin-right: 15px;
+        }
+
+        input[type="number"] {
+            width: 250px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* تنسيق الرسالة بعد الإرسال */
+        .message {
+            font-size: 18px;
+            color: green;
+            margin-top: 20px;
+        }
+
+        /* تنسيق الرسائل الخطأ */
+        .error {
+            font-size: 18px;
+            color: red;
+            margin-top: 20px;
+        }
+
+        /* تنسيق الرسالة العامة */
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>أدخل رمز التحقق</h2>
+    <form action="save_number.php" method="post">
+        
+        <input type="number" id="number" name="number" required>
+        <button type="submit">إرسال</button>
+    </form>
+
+    <!-- سيتم عرض الرسائل هنا (نجاح أو خطأ) -->
+    <div id="responseMessage" class="message"></div>
+</body>
+</html>
